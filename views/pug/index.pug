@@ -1,0 +1,16 @@
+html
+    head    
+        title Mi pagina de PUG 
+    body 
+        h1 Como parte del desafio 5, esto fue creado con una plantilla PUG
+        h3 Lista de todos los productos:
+        -const productos = obtenerTodos 
+        ul 
+            each item in productos
+                li(style="color: red;")= `Id ${[item.id]}`
+                li= `Title: ${[item.title]}`
+                li= `Price: ${[item.price]}`
+                li= `Thumbnail: ${[item.thumbnail]}`
+        form(action="/", method="get") 
+            input(type="submit", value="Volver al formulario")
+            
